@@ -38,7 +38,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
     private int chartBgColor = Color.rgb(219, 225, 231);
     private int chartLineColorDark = Color.rgb(55,71, 79);
     private int labelTextColor = Color.rgb(50, 50, 50);
-    private float textSize = 28f;
+    private float textSize = 30f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +80,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
 
         // add data
         setData(100, 30);
-        mChart.setViewPortOffsets(80f, 50f, 50f, 100f);
+        mChart.setViewPortOffsets(80f, 50f, 50f, 130f);
         mChart.invalidate();
 
         // get the legend (only possible after setting data)
@@ -88,9 +88,10 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
         l.setEnabled(true);
         l.setTextSize(textSize);
         l.setFormLineWidth(15f);
+        l.setYOffset(5f);
         l.setFormSize(30f);
         l.setForm(Legend.LegendForm.LINE);
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
         l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
 
         XAxis xAxis = mChart.getXAxis();
@@ -102,6 +103,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
         xAxis.setTextColor(labelTextColor);
         xAxis.setCenterAxisLabels(true);
         xAxis.setGranularity(1f); // one hour
+        xAxis.setLabelRotationAngle(-20f);
         xAxis.setValueFormatter(new IAxisValueFormatter() {
 
             private SimpleDateFormat mFormat = new SimpleDateFormat("dd MMM HH:mm");

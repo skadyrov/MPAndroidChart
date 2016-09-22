@@ -114,8 +114,8 @@ public abstract class ComponentBase {
      */
     public void setTextSize(float size) {
 
-        if (size > 24f)
-            size = 24f;
+        if (size > 30f)
+            size = 30f;
         if (size < 6f)
             size = 6f;
 
