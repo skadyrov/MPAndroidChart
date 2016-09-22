@@ -80,7 +80,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
 
         // add data
         setData(100, 30);
-        mChart.setViewPortOffsets(80f, 50f, 50f, 130f);
+        mChart.setViewPortOffsets(80f, 50f, 50f, 100f);
         mChart.invalidate();
 
         // get the legend (only possible after setting data)
@@ -103,7 +103,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
         xAxis.setTextColor(labelTextColor);
         xAxis.setCenterAxisLabels(true);
         xAxis.setGranularity(1f); // one hour
-        xAxis.setLabelRotationAngle(-20f);
+        xAxis.setLabelRotationAngle(-15f);
         xAxis.setValueFormatter(new IAxisValueFormatter() {
 
             private SimpleDateFormat mFormat = new SimpleDateFormat("dd MMM HH:mm");
