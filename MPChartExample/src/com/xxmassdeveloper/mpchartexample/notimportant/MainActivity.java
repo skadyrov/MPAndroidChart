@@ -32,6 +32,7 @@ import com.xxmassdeveloper.mpchartexample.LineChartActivity1;
 import com.xxmassdeveloper.mpchartexample.LineChartActivity2;
 import com.xxmassdeveloper.mpchartexample.LineChartActivityColored;
 import com.xxmassdeveloper.mpchartexample.LineChartTime;
+import com.xxmassdeveloper.mpchartexample.LineChartTimeLarge;
 import com.xxmassdeveloper.mpchartexample.ListViewBarChartActivity;
 import com.xxmassdeveloper.mpchartexample.ListViewMultiChartActivity;
 import com.xxmassdeveloper.mpchartexample.MultiLineChartActivity;
@@ -147,7 +148,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
         objects.add(new ContentItem(
                 "Half PieChart",
                 "This demonstrates how to create a 180 degree PieChart."));
-
+        ContentItem timeLarge = new ContentItem(
+                "Time Chart Large",
+                "Simple demonstration of a time-chart with large font.");
+        timeLarge.isNew = true;
+        objects.add(timeLarge);
         MyAdapter adapter = new MyAdapter(this, objects);
 
         ListView lv = (ListView) findViewById(R.id.listView1);
@@ -288,6 +293,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 break;
             case 31:
                 i = new Intent(this, HalfPieChartActivity.class);
+                startActivity(i);
+                break;
+            case 32:
+                i = new Intent(this, LineChartTimeLarge.class);
                 startActivity(i);
                 break;
 
