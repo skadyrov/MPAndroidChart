@@ -7,7 +7,11 @@
         android:id="@+id/chart1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/seekBar1" />
+        android:layout_above="@+id/seekBar1"
+        android:layout_alignRight="@+id/tvXMax"
+        android:layout_alignEnd="@+id/tvXMax"
+        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_alignStart="@+id/seekBar1" />
 
     <SeekBar
         android:id="@+id/seekBar1"
