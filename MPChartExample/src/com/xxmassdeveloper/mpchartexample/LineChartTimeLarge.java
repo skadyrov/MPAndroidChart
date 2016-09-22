@@ -40,7 +40,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
     private int chartBgColor = Color.rgb(219, 225, 231);
     private int chartLineColorDark = Color.rgb(55,71, 79);
     private int labelTextColor = Color.rgb(50, 50, 50);
-    private float textSize = 35f;
+    private float textSize = 28f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,13 +82,16 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
 
         // add data
         setData(100, 30);
+        mChart.setViewPortOffsets(80f, 50f, 50f, 100f);
         mChart.invalidate();
 
         // get the legend (only possible after setting data)
         Legend l = mChart.getLegend();
         l.setEnabled(true);
         l.setTextSize(textSize);
-        l.setMaxSizePercent(200f);
+        l.setFormLineWidth(15f);
+        l.setFormSize(30f);
+        l.setForm(Legend.LegendForm.LINE);
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
         l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
 
@@ -120,12 +123,13 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
 
 
         YAxis leftAxis = mChart.getAxisLeft();
-        //leftAxis.setTypeface(mTfLight);
+        //leftAxis.setTypeface(mTfRegular);
         leftAxis.setDrawGridLines(true);
         leftAxis.setGranularityEnabled(true);
         leftAxis.setAxisMinimum(30f);
         leftAxis.setAxisMaximum(120f);
         leftAxis.setTextSize(textSize);
+        leftAxis.setXOffset(20);
         leftAxis.setDrawAxisLine(false);
         leftAxis.setTextColor(labelTextColor);
         leftAxis.setEnabled(true);

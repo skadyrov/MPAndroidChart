@@ -29,6 +29,8 @@ public abstract class DemoBase extends FragmentActivity {
 
     protected Typeface mTfRegular;
     protected Typeface mTfLight;
+    protected Typeface mTfBold;
+    protected Typeface mTfSemiBold;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public abstract class DemoBase extends FragmentActivity {
 
         mTfRegular = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
         mTfLight = Typeface.createFromAsset(getAssets(), "OpenSans-Light.ttf");
+        mTfBold = Typeface.createFromAsset(getAssets(), "OpenSans-Bold.ttf");
+        mTfSemiBold = Typeface.createFromAsset(getAssets(), "OpenSans-Semibold.ttf");
     }
 
     protected float getRandom(float range, float startsfrom) {
