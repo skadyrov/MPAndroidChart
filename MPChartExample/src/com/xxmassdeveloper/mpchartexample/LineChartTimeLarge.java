@@ -80,7 +80,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
 
         // add data
         setData(100, 30);
-        mChart.setViewPortOffsets(80f, 50f, 50f, 100f);
+        mChart.setViewPortOffsets(80f, 70f, 50f, 100f);
         mChart.invalidate();
 
         // get the legend (only possible after setting data)
@@ -88,7 +88,7 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
         l.setEnabled(true);
         l.setTextSize(textSize);
         l.setFormLineWidth(15f);
-        l.setYOffset(5f);
+        l.setYOffset(10f);
         l.setFormSize(30f);
         l.setForm(Legend.LegendForm.LINE);
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
