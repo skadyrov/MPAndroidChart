@@ -22,6 +22,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.xxmassdeveloper.mpchartexample.custom.MyMarkerView;
 import com.xxmassdeveloper.mpchartexample.notimportant.DemoBase;
 
 import java.text.SimpleDateFormat;
@@ -82,6 +83,13 @@ public class LineChartTimeLarge extends DemoBase implements OnSeekBarChangeListe
         setData(100, 30);
         mChart.setViewPortOffsets(80f, 70f, 50f, 100f);
         mChart.invalidate();
+
+
+        // create a custom MarkerView (extend MarkerView) and specify the layout
+        // to use for it
+        MyMarkerView mv = new MyMarkerView(this, R.layout.custom_marker_view2);
+        mv.setChartView(mChart); // For bounds control
+        mChart.setMarker(mv); // Set the marker to the chart
 
         // get the legend (only possible after setting data)
         Legend l = mChart.getLegend();
